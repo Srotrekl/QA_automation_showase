@@ -1,10 +1,11 @@
 # QA Automation Showcase
 
-![CI](https://github.com/<username>/qa-automation-showcase/actions/workflows/tests.yml/badge.svg)
+![CI](https://github.com/Srotrekl/QA_automation_showcase/actions/workflows/tests.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
+![Tests](https://img.shields.io/badge/tests-39%20passed-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-End-to-end UI a REST API test suite nad **SauceDemo** a **Restful Booker** — pytest, Playwright, requests, Allure reporting.
+End-to-end UI a REST API test suite nad **SauceDemo** a **Restful Booker** — pytest, Playwright, requests, Allure reporting, Postman.
 
 ## Tech Stack
 
@@ -26,6 +27,7 @@ qa-automation-showcase/
 ├── config/          # Centrální konfigurace (env variables)
 ├── docs/            # Test strategy, bug report template
 ├── pages/           # Page Object Model (SauceDemo)
+├── postman/         # Postman kolekce (manuální API testy)
 ├── tests/
 │   ├── api/         # REST API testy (Restful Booker)
 │   └── ui/          # UI E2E testy (SauceDemo)
@@ -40,7 +42,7 @@ qa-automation-showcase/
 
 ```bash
 # 1. Klonuj repozitář
-git clone https://github.com/<username>/qa-automation-showcase.git
+git clone https://github.com/Srotrekl/QA_automation_showcase.git
 cd qa-automation-showcase
 
 # 2. Vytvoř a aktivuj virtuální prostředí
@@ -103,9 +105,9 @@ Detailní matice pokrytí viz [docs/TEST_STRATEGY.md](docs/TEST_STRATEGY.md).
 
 | Oblast | Smoke | Regression | Negative |
 |--------|:-----:|:----------:|:--------:|
-| Login (UI) | 2 | 1 | 2 |
-| Inventory (UI) | 2 | 5 | — |
-| Cart & Checkout (UI) | 2 | 2 | 2 |
+| Login (UI) | 2 | 1 | 4 |
+| Inventory (UI) | 2 | 6 | — |
+| Cart & Checkout (UI) | 2 | 2 | 3 |
 | Auth (API) | 1 | — | 1 |
 | Booking CRUD (API) | 2 | 5 | 3 |
 
@@ -115,6 +117,17 @@ Detailní matice pokrytí viz [docs/TEST_STRATEGY.md](docs/TEST_STRATEGY.md).
 - **Java** 8+ (pro Allure CLI)
 - **Node.js** (volitelné, pro `npm install -g allure-commandline`)
 - **OS:** Windows, Linux, macOS
+
+## Postman kolekce
+
+Manuální API testy pro Restful Booker jsou v `postman/` složce.
+
+```bash
+# Import do Postmanu:
+# File → Import → vybrat postman/Restful_Booker.postman_collection.json
+```
+
+Kolekce obsahuje: Auth (token), CRUD (create, read, update, delete), Negative (neexistující booking, bez auth).
 
 ## Dokumentace
 

@@ -22,6 +22,10 @@ allure-report/
 # Playwright
 test-results/
 
+# Reports
+report.html
+assets/
+
 # Environment variables
 .env
 
