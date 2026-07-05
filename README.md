@@ -2,12 +2,12 @@
 
 [![CI](https://github.com/Srotrekl/QA_automation_showcase/actions/workflows/tests.yml/badge.svg)](https://github.com/Srotrekl/QA_automation_showcase/actions/workflows/tests.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/tests-39%20passed-brightgreen)](#test-coverage)
+[![Tests](https://img.shields.io/badge/tests-41%20passed-brightgreen)](#test-coverage)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 End-to-end UI and REST API test suite for **SauceDemo** and **Restful Booker** — pytest, Playwright, Allure reporting, Postman/Newman, CI/CD on every push.
 
-**39 tests · UI + API · 2 browsers in CI · real bug found & documented**
+**41 tests · UI + API · 2 browsers in CI · real bug found & documented**
 
 ---
 
@@ -91,6 +91,10 @@ pytest -m negative       # Negative scenarios
 ---
 
 ## Allure Report
+
+![Allure report – 41 tests, 100% passed](docs/assets/allure-overview.png)
+
+*41 test cases (24 UI + 16 API), 100% passed, grouped by Features by stories.*
 
 ```bash
 pytest --alluredir=allure-results
